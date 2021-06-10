@@ -34,21 +34,21 @@ public class CardTrick {
         
         //insert code to ask the user for Card value and suit, create their card
         Scanner input = new Scanner(System.in);
-        Card rancard = new Card();
+        Card luckycard = new Card();
         System.out.println("Enter a card between 1 and 13: ");
         
         int gVal = input.nextInt();
-        rancard.setValue(gVal);
+        luckycard.setValue(gVal);
         System.out.println("Enter a suit: 1(Hearts), 2(Diamonds), 3(Spades), 4(Clubs)");
         
         int gSuits = input.nextInt();
-        rancard.setSuit(Card.SUITS[gSuits-1]);
+        luckycard.setSuit(Card.SUITS[gSuits-1]);
         
         // mHand search is here
         boolean match = true;
         for(int i=0; i< mHand.length; i++)
        {
-            if(rancard.getValue() == mHand[i].getValue() && rancard.getSuit() == mHand[i].getSuit())
+            if(luckycard.getValue() == mHand[i].getValue() && luckycard.getSuit() == mHand[i].getSuit())
             {
                 match = true;
                 break;
